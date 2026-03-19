@@ -54,10 +54,30 @@ print(set_intersection_all([{1,2,3},{2,3},{2}]))
 
 
 def group_words_by_last_letter(words):
-    pass
+    new = {}
+    for i in words:
+        new.setdefault(i[-1], []).append(i)
+    return new
 
-def recursive_flatten(data):
+print(group_words_by_last_letter(['cat','bat','car']))
+def recursive_flatten(data): 
     pass
 
 def dict_of_squares(nums):
     pass
+
+def count_down(n):
+    if n ==0:
+        return []
+    else:
+        rec = count_down(n-1)
+        count = [n]+rec
+    return count
+print(count_down(5))
+        
+def sum_list(lis):
+    if len(lis)<=1:
+        return []
+    else:
+        return lis[0]+sum_list(lis[1:])
+print(sum_list([1,2,3]))
