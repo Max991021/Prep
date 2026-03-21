@@ -61,7 +61,12 @@ def group_words_by_last_letter(words):
 
 print(group_words_by_last_letter(['cat','bat','car']))
 def recursive_flatten(data): 
-    pass
+    lis = []
+    for i in data:
+        if isinstance(i,list):
+            lis.extend(recursive_flatten(i))
+        else:
+            lis.append(i)
 
 def dict_of_squares(nums):
     pass
