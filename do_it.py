@@ -69,7 +69,7 @@ def recursive_flatten(data):
             lis.append(i)
 
 def dict_of_squares(nums):
-    pass
+    return {value:value*2 for value in nums}
 
 def count_down(n):
     if n ==0:
